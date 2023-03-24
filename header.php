@@ -53,14 +53,12 @@
 
                         <div class="offcanvas-footer d-lg-none">
                             <div>
-                                <a href="mailto:first.last@email.com" class="link-inverse">info@email.com</a>
-                                <br /> 00 (123) 456 78 90 <br />
+                                <a href="mailto:info@wayce.org" class="link-inverse">info@wayce.org</a>
+                                <br /> <a href="tel:+2349033797799"> +234 (0) 903 379 7799 </a> <br />
                                 <nav class="nav social social-white mt-4">
-                                    <a href="#"><i class="uil uil-twitter"></i></a>
-                                    <a href="#"><i class="uil uil-facebook-f"></i></a>
-                                    <a href="#"><i class="uil uil-dribbble"></i></a>
-                                    <a href="#"><i class="uil uil-instagram"></i></a>
-                                    <a href="#"><i class="uil uil-youtube"></i></a>
+                                    <a href="https://www.facebook.com/wayce.org/" target="_blank"><i class="uil uil-facebook-f"></i></a>
+                                    <a href="https://twitter.com/wayce_org" target="_blank"><i class="uil uil-twitter"></i></a>
+                                    <a href="https://www.instagram.com/wayce_org/" target="_blank"><i class="uil uil-instagram"></i></a>
                                 </nav>
                                 <!-- /.social -->
                             </div>
