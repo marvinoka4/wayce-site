@@ -1,5 +1,5 @@
-# start-dragon
-A Starter Project for development based on Foundation CSS by Zurb Foundation
+# WAYCE Website
+A website developed with wordpress, scss and gulp
 
 1. run npm install
 2. run gulp
