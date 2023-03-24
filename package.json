@@ -1,0 +1,26 @@
+{
+  "name": "zzz-dragon-start",
+  "version": "1.0.0",
+  "description": "Project aimed at setting up Gulp, Foundation CSS Framework and Browser-Sync for development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dragon-Lord",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.11",
+    "cssnano": "^5.1.14",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-load-plugins": "^2.0.8",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss": "^8.4.21",
+    "sass": "^1.58.0"
+  }
+}
