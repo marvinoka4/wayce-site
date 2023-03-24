@@ -31,7 +31,7 @@ get_header(); ?>
     <div class="container pt-19 pt-md-21 pb-16 pb-md-18">
         <div class="row">
             <div class="col-lg-8 col-xl-7 col-xxl-6">
-                <h2 class="fs-16 text-uppercase text-line text-primary mb-3">Our Objectives</h2>
+                <h2 class="fs-16 text-uppercase text-line text-primary mb-3">Our Objectives.</h2>
                 <h3 class="display-4 mb-9">A healthy, drug abuse free and just society for women and youths.</h3>
             </div>
             <!-- /column -->
