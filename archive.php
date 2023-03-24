@@ -13,7 +13,7 @@ get_header(); ?>
 
 <?php get_template_part( 'template-parts/content', 'page-head'); ?>
 
-<?php get_template_part( 'template-parts/content', 'sidebar'); ?>
+<?php get_template_part( 'template-parts/content', 'archive'); ?>
 
 
 <?php get_footer(); ?>
