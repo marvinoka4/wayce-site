@@ -32,9 +32,60 @@ add_action('wp_enqueue_scripts', 'dragon_styles');
 function dragon_scripts(){
 
     $version = wp_get_theme()->get( 'Version' );
+    wp_enqueue_script('jquery-main', get_template_directory_uri(). '/assets/scripts/js/vendor/jquery.js');
     wp_enqueue_script('site-js', get_template_directory_uri() . '/assets/scripts/scripts.js', array(), '$version', true);
 }
 add_action('wp_enqueue_scripts', 'dragon_scripts');
+
+add_action('wp_ajax_wayce-form', 'dragon_enquiry');
+add_action('wp_ajax_nopriv_wayce-form', 'dragon_enquiry');
+
+function dragon_enquiry(){
+
+    $form_data = [];
+
+    wp_parse_str($_POST['wayce-form'], $form_data);
+
+    //admin email
+    $admin_email = get_option('admin_email');
+
+    // email headers
+    $headers[] = 'Content-Type: text/html; charset=UTF-8';
+    $headers[] = 'From: WAYCE Website < ' . $admin_email . ' >';
+    $headers[] = 'Reply to: ' . $form_data['form-email'];
+
+    //email recipient
+    $send_to = $admin_email;
+
+    // subject
+    $subject = "WAYCE Website " . $form_data['form-enquiry'] . " Enquiry from " . $form_data['form-firstname'] . ' ' . $form_data['form-lastname'];
+
+    // message
+    $message = '';
+
+    foreach ($form_data as $index => $field) {
+        $message .= '<strong>' . $index . '</strong>: ' . $field . '<br />';
+    }
+
+    try {
+        if ( wp_mail($send_to, $subject, $message, $headers) ) {
+
+            wp_send_json_success('Thank you for contacting us, a member of our team would get back to you shortly!');
+
+        } else {
+
+            wp_send_json_error('There was an error, please check servers and try again!');
+
+        }
+    } catch (Exception $e) {
+
+        wp_send_json_error($e->getMessage());
+    }
+
+
+
+    wp_send_json_success( $form_data['form-firstname'] );
+}
 
 function dragon_widgets() {
 
