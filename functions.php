@@ -53,6 +53,7 @@ function dragon_enquiry(){
     $headers[] = 'Content-Type: text/html; charset=UTF-8';
     $headers[] = 'From: WAYCE Website < ' . $admin_email . ' >';
     $headers[] = 'Reply to: ' . $form_data['form-email'];
+    $headers[] = 'BCC: info@wayce.org';
 
     //email recipient
     $send_to = $admin_email;
