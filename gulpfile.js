@@ -15,7 +15,6 @@ const sass_paths = [
 ];
 
 const js_paths = [
-    'assets/scripts/js/vendor/jquery.js',
     'assets/scripts/js/vendor/plugins.js',
     'assets/scripts/js/vendor/theme.js',
     'assets/scripts/js/app.js'
@@ -59,9 +58,10 @@ function scripts() {
 //browser-sync function
 function browser_server(reloaded) {
     browser_sync.init({
-        server: {
-            baseDir:"./"
-        }
+        open:'external',
+        // host: 'localhost',
+        // port: 3000,
+        proxy: "http://wayce.test//"
     });
     reloaded();
 }

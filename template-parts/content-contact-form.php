@@ -94,6 +94,7 @@
 
             success: function (res) {
 
+                jQuery('#error-alert-messages').hide();
                 jQuery('#wayce-form').fadeOut(200);
                 jQuery('#success-alert-messages').show();
                 jQuery('#success-alert-messages-text').text('Thank you for contacting us, a member of our team would get back to you shortly!').show();
@@ -104,6 +105,7 @@
 
             error: function (err) {
 
+                jQuery('#success-alert-messages').hide();
                 jQuery('#wayce-form').fadeOut(200);
                 jQuery('#error-alert-messages').show();
                 jQuery('#error-alert-messages-text').text('There was an error, please check servers and try again!').show();
@@ -114,7 +116,6 @@
 
         })
 
-        console.log(form);
     })
 
 </script>
